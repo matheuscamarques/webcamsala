@@ -1,8 +1,25 @@
 const express = require('express')
 const app = express()
-const server = require('http').Server(app)
-const io = require('socket.io')(server)
+
+
 const { v4: uuidV4 } = require('uuid')
+
+const https = require('https');
+const fs = require('fs');
+
+// readFileSync function must use __dirname get current directory
+// require use ./ refer to current directory.
+
+const options = {
+    key: fs.readFileSync('./key.pem'),
+    cert: fs.readFileSync('./csr.pem')
+};
+
+
+// Create HTTPs server.
+
+const server = https.createServer(options, app);
+const io = require('socket.io')(server);
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
