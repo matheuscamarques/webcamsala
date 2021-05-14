@@ -1,0 +1,29 @@
+{
+    "name": "webcam",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "devStart": "nodemon server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/matheuscamarques/webcamsala.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/matheuscamarques/webcamsala/issues"
+    },
+    "homepage": "https://github.com/matheuscamarques/webcamsala#readme",
+    "dependencies": {
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "socket.io": "^4.1.1",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
+}
