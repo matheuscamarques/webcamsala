@@ -11,8 +11,8 @@ const fs = require('fs');
 // require use ./ refer to current directory.
 
 const options = {
-    key: fs.readFileSync('./key.pem'),
-    cert: fs.readFileSync('./csr.pem')
+    key: fs.readFileSync('./localhost.key'),
+    cert: fs.readFileSync('./localhost.crt')
 };
 
 
